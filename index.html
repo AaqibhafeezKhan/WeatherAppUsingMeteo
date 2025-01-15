@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Weather App</h1>
+            <button id="unitToggle" class="unit-toggle">Switch to °F</button>
+        </header>
+
+        <div class="search-container">
+            <form id="searchForm">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Enter city name..."
+                    required
+                >
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+        <div id="errorMessage" class="error-message"></div>
+        <div id="loader" class="loader hidden"></div>
+
+        <main>
+            <section id="currentWeather" class="current-weather hidden">
+                <h2 id="location"></h2>
+                <div class="weather-info">
+                    <div class="weather-main">
+                        <div id="weatherIcon" class="weather-icon"></div>
+                        <div class="temperature-container">
+                            <p id="temperature" class="temperature"></p>
+                            <p id="description" class="description"></p>
+                        </div>
+                    </div>
+                    <div class="weather-details">
+                        <div class="detail">
+                            <span>Humidity</span>
+                            <span id="humidity"></span>
+                        </div>
+                        <div class="detail">
+                            <span>Wind Speed</span>
+                            <span id="windSpeed"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="forecast" class="forecast hidden">
+                <h3>7-Day Forecast</h3>
+                <div id="forecastContainer" class="forecast-container"></div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
